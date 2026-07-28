@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dance Portfolio</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Pretendard", "Noto Sans KR", Arial, sans-serif;
+        background: #0f0f14;
+        color: #fff;
+        line-height: 1.6;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .wrap {
+        width: min(1120px, 92%);
+        margin: 0 auto;
+      }
+
+      .hero {
+        min-height: 52vh;
+        display: flex;
+        align-items: center;
+        padding: 90px 0 70px;
+        background:
+          radial-gradient(circle at top right, rgba(255, 145, 180, 0.22), transparent 34%),
+          radial-gradient(circle at bottom left, rgba(112, 92, 255, 0.22), transparent 32%), #0f0f14;
+      }
+
+      .hero__label {
+        display: inline-block;
+        margin-bottom: 18px;
+        padding: 7px 14px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 999px;
+        font-size: 14px;
+        color: #f6c4d3;
+        letter-spacing: 0.06em;
+      }
+
+      .hero h1 {
+        max-width: 760px;
+        font-size: clamp(38px, 7vw, 76px);
+        line-height: 1.05;
+        letter-spacing: -0.05em;
+      }
+
+      .hero p {
+        max-width: 620px;
+        margin-top: 24px;
+        color: #c9c9d4;
+        font-size: 18px;
+      }
+
+      .section {
+        padding: 80px 0;
+      }
+
+      .section-title {
+        margin-bottom: 34px;
+      }
+
+      .section-title h2 {
+        font-size: clamp(28px, 4vw, 44px);
+        letter-spacing: -0.04em;
+      }
+
+      .section-title p {
+        margin-top: 10px;
+        color: #a9a9b6;
+      }
+
+      .video-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px;
+      }
+
+      .video-card {
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 24px;
+        background: rgba(255, 255, 255, 0.045);
+        box-shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
+        transition:
+          transform 0.25s ease,
+          border-color 0.25s ease;
+      }
+
+      .video-card:hover {
+        transform: translateY(-6px);
+        border-color: rgba(255, 196, 214, 0.48);
+      }
+
+      .video-box {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        background: #191922;
+      }
+
+      .video-box iframe {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+      }
+
+      .video-info {
+        padding: 24px 24px 28px;
+      }
+
+      .video-info span {
+        display: block;
+        margin-bottom: 8px;
+        color: #f6a9c0;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .video-info h3 {
+        margin-bottom: 10px;
+        font-size: 22px;
+        letter-spacing: -0.03em;
+      }
+
+      .video-info p {
+        color: #bdbdcc;
+        font-size: 15px;
+      }
+
+      .contact {
+        margin-top: 60px;
+        padding: 34px;
+        border-radius: 24px;
+        background: linear-gradient(135deg, rgba(255, 169, 192, 0.16), rgba(112, 92, 255, 0.16));
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        text-align: center;
+      }
+
+      .contact h2 {
+        margin-bottom: 10px;
+        font-size: 28px;
+        letter-spacing: -0.03em;
+      }
+
+      .contact p {
+        color: #d7d7e2;
+      }
+
+      .contact a {
+        display: inline-block;
+        margin-top: 22px;
+        padding: 13px 22px;
+        border-radius: 999px;
+        background: #fff;
+        color: #111;
+        font-weight: 700;
+      }
+
+      footer {
+        padding: 34px 0;
+        color: #777786;
+        text-align: center;
+        font-size: 14px;
+      }
+
+      @media (max-width: 768px) {
+        .hero {
+          min-height: auto;
+          padding: 72px 0 54px;
+        }
+
+        .hero p {
+          font-size: 16px;
+        }
+
+        .section {
+          padding: 56px 0;
+        }
+
+        .video-list {
+          grid-template-columns: 1fr;
+          gap: 22px;
+        }
+
+        .video-info {
+          padding: 20px;
+        }
+
+        .contact {
+          margin-top: 42px;
+          padding: 28px 20px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="hero">
+      <div class="wrap">
+        <span class="hero__label">DANCE PORTFOLIO</span>
+        <h1>KIM BO HWA</h1>
+        <p>힙합댄스 영상을 모아 소개하는 포트폴리오입니다.</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="wrap">
+          <div class="section-title">
+            <h2>Dance Videos</h2>
+            <p>모든 작업물은 힙합댄스를 기반한 안무입니다.</p>
+          </div>
+
+          <div class="video-list">
+            <article class="video-card">
+              <div class="video-box">
+                <video src="./01.mp4" controls playsinline style="width: 100%; height: 100%"></video>
+              </div>
+              <div class="video-info">
+                <span>VIDEO 01</span>
+            </article>
+
+            <article class="video-card">
+              <div class="video-box">
+                <video src="./02.mp4" controls playsinline style="width: 100%; height: 100%"></video>
+              </div>
+              <div class="video-info">
+                <span>VIDEO 02</span>
+              </div>
+            </article>
+
+            <article class="video-card">
+              <div class="video-box">
+                <video src="./03.mp4" controls playsinline style="width: 100%; height: 100%"></video>
+              </div>
+              <div class="video-info">
+                <span>VIDEO 03</span>
+              </div>
+            </article>
+
+          </div>
+
+          <div class="contact">
+            <h2>More Video</h2>
+            <p>더 많은 작업물은 아래 링크에서 확인할 수 있습니다.</p>
+            <a target="_blank" href="https://www.youtube.com/watch?v=4mI4rT3eo6w&list=PLtLTFYRSoxTzAMwmrFOZ4A4nI5oPl-A5k">유튜브 링크</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">© 2026 Dance Portfolio. All Rights Reserved.</div>
+    </footer>
+  </body>
+</html>
